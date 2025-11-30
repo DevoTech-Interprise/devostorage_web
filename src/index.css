@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode (applies dark:* utilities when .dark is on the html element) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
