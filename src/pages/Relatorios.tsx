@@ -139,6 +139,17 @@ export const Relatorios: React.FC = () => {
 
         {error && <div className="p-3 bg-red-50 dark:bg-red-900 text-red-700 dark:text-red-200 rounded">{error}</div>}
 
+        {/* Estoque Report Section */}
+        <section className="bg-white dark:bg-gray-800 p-4 rounded shadow">
+          <div className="flex items-center justify-between">
+            <h2 className="font-semibold text-gray-900 dark:text-white">Relatório de Estoque</h2>
+            <div className="flex items-center gap-2">
+              <button onClick={() => gerarArquivo('estoque','pdf')} className="px-3 py-1 bg-indigo-600 dark:bg-indigo-500 text-white rounded text-sm hover:bg-indigo-700 dark:hover:bg-indigo-600">Gerar PDF</button>
+              <button onClick={() => gerarArquivo('estoque','excel')} className="px-3 py-1 bg-green-600 dark:bg-green-500 text-white rounded text-sm hover:bg-green-700 dark:hover:bg-green-600">Gerar Excel</button>
+            </div>
+          </div>
+        </section>
+
         {/* Estoque summary cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="bg-white dark:bg-gray-800 p-4 rounded shadow flex items-center gap-3">
